@@ -1,0 +1,3 @@
+./train_img_example/images/P0000__1__0___0.png
+./train_img_example/images/P0000__1__0___1024.png
+./train_img_example/images/P0000__1__0___1536.png
