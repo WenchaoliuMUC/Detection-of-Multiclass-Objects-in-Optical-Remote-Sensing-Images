@@ -42,7 +42,5 @@ Note: Please config the improved orientated response network follows [IORN](http
 ```python
   Run "python test_for_map.py"
 ```
-```License:
-  MIT License.
-```
-NOTE:1, This project is built based on the code [marvis](https://github.com/marvis/pytorch-yolo2). Thanks all the contributors. 2, DOTA dataset was updated, we have not tested the new version. 3, If you can't find coresponding version of running environments, please contact me. 4, If you have any suggestions or questions, please contact me liuwenchaomuc@163.com.
+
+NOTE:1, This project is built based on the code [marvis](https://github.com/marvis/pytorch-yolo2). Thanks all the contributors. MIT License. 2, DOTA dataset was updated, we have not tested the new version. 3, If you can't find coresponding version of running environments, please contact me. 4, If you have any suggestions or questions, please contact me liuwenchaomuc@163.com.
