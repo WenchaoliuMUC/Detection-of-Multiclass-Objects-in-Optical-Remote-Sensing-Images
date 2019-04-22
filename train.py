@@ -114,15 +114,13 @@ def train(epoch):
         if use_cuda:
             data = data.cuda()
         data, target = Variable(data), Variable(target)
-        if batch_idx % subdiv == 0:
-            processed_batches = processed_batches + 1
-            optimizer.zero_grad()
+        processed_batches = processed_batches + 1
+        optimizer.zero_grad()
         output = model(data)
         region_loss.seen = region_loss.seen + data.data.size(0)
         loss = region_loss(output, target, batch_idx)
         loss.backward()
-        if batch_idx % subdiv == 1:
-            optimizer.step()
+        optimizer.step()
     if (epoch+1) % save_interval == 0:
         logging('save weights to %s/%06d.weights' % (backupdir, epoch+1))
         cur_model.seen = (epoch + 1) * len(train_loader.dataset)

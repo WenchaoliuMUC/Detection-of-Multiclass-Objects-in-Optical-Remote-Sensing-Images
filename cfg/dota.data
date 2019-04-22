@@ -2,5 +2,5 @@ train  = /home/lwc/my_prj/DOTA/train/train_1024/trainsplit/train.txt
 valid  = /home/lwc/my_prj/DOTA/train/train_1024/trainsplit/train.txt
 names = data/dota.names
 backup = backup
-gpus  = 0
+gpus  = 0,1
 num_workers =14
