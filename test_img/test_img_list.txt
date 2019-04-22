@@ -1,0 +1,5 @@
+./test_img/P0006.png
+./test_img/P0014.png
+./test_img/P0024.png
+./test_img/P0028.png
+./test_img/P0034.png
