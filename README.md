@@ -16,7 +16,8 @@ torchvision [Vision](https://github.com/pytorch/vision)
   
 # Prerequisites
 ```python
-  pip install shapely  
+  pip install shapely
+  sudo apt-get install ttf-mscorefonts-installer
 ``` 
 Download weight parameters form [Google Drive](https://drive.google.com/file/d/1pvsVnxh4fqhkiInegHLlqunLvCHJENz8/view?usp=sharing) and put it into backup file folder.  
 Download [DOTA](https://captain-whu.github.io/DOTA/index.html) dataset  

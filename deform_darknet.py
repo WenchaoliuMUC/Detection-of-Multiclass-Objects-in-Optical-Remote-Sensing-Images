@@ -342,8 +342,9 @@ class deformDarknet(nn.Module):
         self.header[3] = self.seen
         header = self.header
         header.numpy().tofile(fp)
-
+        ind = -1
         for blockId in range(1, cutoff + 1):
+            ind = ind + 1
             block = self.blocks[blockId]
             if block['type'] == 'iorn_convolutional':
                 model = self.models[ind]

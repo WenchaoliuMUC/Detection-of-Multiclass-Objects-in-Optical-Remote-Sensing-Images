@@ -75,12 +75,12 @@ def bbox_ious(boxes1, boxes2, x1y1x2y2=True):
 
 
 # def nms_cls(boxes, nms_thresh):
-#     if len(boxes) == 0:
+#     if boxes.__len__() == 0:
 #         return boxes
-#     det_confs = torch.zeros(len(boxes))
-#     for i in range(len(boxes)):
-#         det_confs[i] = 1-boxes[i][4]
-#     _,sortIds = torch.sort(det_confs)
+#     det_confs = torch.zeros(boxes.__len__())
+#     for i in range(boxes.__len__()):
+#         det_confs[i] = boxes[i][4]
+#     _,sortIds = torch.sort(det_confs, descending=True)
 #     out_boxes = []
 #     for i in range(len(boxes)):
 #         box_i = boxes[sortIds[i]]
@@ -94,14 +94,14 @@ def bbox_ious(boxes1, boxes2, x1y1x2y2=True):
 #     return out_boxes
 
 def nms(boxes, nms_thresh):
-    if len(boxes) == 0:
+    if boxes.__len__() == 0:
         return boxes
 
-    det_confs = torch.zeros(len(boxes))
-    for i in range(len(boxes)):
-        det_confs[i] = 1-boxes[i][4]
+    det_confs = torch.zeros(boxes.__len__())
+    for i in range(boxes.__len__()):
+        det_confs[i] = boxes[i][4]
 
-    _,sortIds = torch.sort(det_confs)
+    _, sortIds = torch.sort(det_confs, descending=True)
     out_boxes = []
     for i in range(len(boxes)):
         box_i = boxes[sortIds[i]]
